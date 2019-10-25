@@ -83,6 +83,7 @@
 .middle .column-1 .buttonFade{
  opacity: 0;
  pointer-events: none;
+ height:0
 }
 
 .middle .column-1 .buttonContainer .startButton{
@@ -106,6 +107,17 @@
   transform: translateY(-3px);
 }
 
+.middle .column-1 .logoDiv{
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  width:100%;
+}
+
+.middle .column-1 .logoDiv img{
+  height:25%
+}
+
 .middle .column-2{
    width:50%;
   height:100%;
@@ -120,6 +132,36 @@
 .middle .column-2 .logoContainer{
   position:absolute;
   width:80%;
+}
+
+.middle .column-2 .navContainer{
+  display:flex;
+  position:absolute;
+  flex-direction: row;
+  width:80%;
+  justify-content: space-evenly;
+  align-items: center;
+  top:100%;
+  transition:all 1s;
+  
+}
+
+.middle .column-2 .moveNav{
+  top:50%
+}
+
+.middle .column-2 .navContainer .navItem{
+  border-top:5px solid #707070;
+  width:calc(60%/3);
+  font-family: 'Anton', sans-serif;
+  color:#707070;
+  cursor:pointer;
+  transition:all 1s;
+  border-radius:0 0 20% 20%;
+}
+
+.middle .column-2 .navContainer .navItem:hover{
+  box-shadow: 0px 10px 10px #707070
 }
 
 .middle .logoMove{
@@ -139,7 +181,8 @@
   display:flex;
   justify-content:center;
   align-items:center  ;
-  transition: height 1s
+  transition: height 1s;
+  flex-direction: column;
 }
 
 .middle .column-3 .buttonContainer{
@@ -158,6 +201,18 @@
 .middle .column-3 .buttonFade{
  opacity: 0;
  pointer-events: none;
+ height:0
+}
+
+.middle .column-3 .logoDiv{
+  display:flex;
+  flex-direction: column;
+  height:100%;
+  width:100%;
+}
+
+.middle .column-3 .logoDiv img{
+  height:25%
 }
 
 .middle .column-3 .buttonContainer .startButton{

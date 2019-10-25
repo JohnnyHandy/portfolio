@@ -11,6 +11,7 @@ function App() {
   const[buttonFade,setButtonFade] = useState('')
   const[logoMove,setLogoMove] = useState('')
   const[techLogos,showTechLogos]=useState(false)
+  const[moveNav,setMoveNav] = useState('')
 
   function startMode(){
     setBorderExpansion('startAction')
@@ -19,6 +20,7 @@ function App() {
     setUpperChange('upperShrink')
     setLowerChange('lowerShrink')
     setLogoMove('logoMove')
+    setMoveNav('moveNav')
     showTechLogos(true)
   }
 
@@ -41,12 +43,17 @@ function App() {
                onMouseLeave={()=>mouseOffStart()} 
                onClick={()=>{startMode()}}>START</button>
             </div>
-            {/* {techLogos ? <Logo/> : null} */}
+            {techLogos ? <Logo column={'1'}/> : null}
           </div>
           <div className={'column-2 '+logoMove}>
             <div className={'logoContainer ' }>
               <img className='logo' src='https://i.imgur.com/9ip0F5Y.png' alt='logo'/>
               <p>Web development done right</p>
+            </div>
+            <div className={'navContainer '+moveNav}>
+              <div className='navItem'>About</div>
+              <div className='navItem'>Projects</div>
+              <div className='navItem'>Contact</div>
             </div>
           </div>
           <div className={'column-3 '+borderExpansion}>
@@ -56,6 +63,7 @@ function App() {
                onMouseLeave={()=>mouseOffStart()} 
                onClick={()=>{startMode()}}>START</button>
             </div>
+            {techLogos ? <Logo column={'3'}/> : null}
           </div>
         </div>
         <div className={'lower '+lowerChange}></div>
